@@ -7,9 +7,13 @@ const headingFont = localFont({
   src: "../public/fonts/font.woff2",
 });
 
-export const Logo = (linkProps: LinkProps) => {
+type Props = Omit<LinkProps, "href"> & {
+  href?: LinkProps["href"];
+};
+
+export const Logo = ({ href = "/", ...rest }: Props) => {
   return (
-    <Link {...linkProps}>
+    <Link href={href} {...rest}>
       <div className="hover:opacity-75 transition items-center gap-x-2 hidden md:flex">
         <Image src="/images/logo.svg" alt="logo" height={30} width={30} />
 

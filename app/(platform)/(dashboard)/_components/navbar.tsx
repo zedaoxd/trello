@@ -10,7 +10,7 @@ export const Navbar = () => {
 
       <div className="flex items-center gap-x-4">
         <div className="hidden md:flex">
-          <Logo href="/" />
+          <Logo />
         </div>
 
         <Button
