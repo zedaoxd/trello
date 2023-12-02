@@ -1,3 +1,17 @@
 {
-  "extends": "next/core-web-vitals"
+  "extends": "next/core-web-vitals",
+  "rules": {
+    // use ;
+    "semi": ["error", "always"],
+    // blank line at the end
+    "eol-last": ["error", "always"],
+    // use single quotes
+    "quotes": ["error", "single"],
+    // use 2 spaces for indentation
+    "indent": ["error", 2],
+    // no use of var
+    "no-var": "error",
+    // no use of console
+    "no-console": "warn"
+  }
 }
