@@ -17,7 +17,10 @@ type State<TInput, TOutput> = {
   isLoading: boolean;
 }
 
-const reducer = <TInput, TOutput>(state: State<TInput, TOutput>, newSatate: Partial<State<TInput, TOutput>>) => {
+const reducer = <TInput, TOutput>(
+  state: State<TInput, TOutput>, 
+  newSatate: Partial<State<TInput, TOutput>>,
+) => {
   return {
     ...state,
     ...newSatate
@@ -26,7 +29,7 @@ const reducer = <TInput, TOutput>(state: State<TInput, TOutput>, newSatate: Part
 
 export const useAction = <TInput, TOutput>(
   action: Action<TInput, TOutput>,
-  options: UseActionOptions<TOutput>
+  options: UseActionOptions<TOutput> = {}
 ) => {
   const [state, setState] = useReducer(reducer<TInput, TOutput>, {
     isLoading: false

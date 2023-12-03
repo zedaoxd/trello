@@ -1,4 +1,4 @@
-"use client";
+'use client';
 
 import {
   AccordionContent,
@@ -6,11 +6,11 @@ import {
   AccordionTrigger,
   Button,
   Skeleton,
-} from "@/components/ui";
-import { cn } from "@/lib/utils";
-import { Activity, CreditCard, Layout, Settings } from "lucide-react";
-import Image from "next/image";
-import { usePathname, useRouter } from "next/navigation";
+} from '@/components/ui';
+import { cn } from '@/lib/utils';
+import { Activity, CreditCard, Layout, Settings } from 'lucide-react';
+import Image from 'next/image';
+import { usePathname, useRouter } from 'next/navigation';
 
 export type Organization = {
   id: string;
@@ -37,22 +37,22 @@ export const NavItem = ({
 
   const routes = [
     {
-      label: "Boards",
+      label: 'Boards',
       icon: <Layout className="h-4 w-4 mr-2" />,
       href: `/organization/${organization.id}`,
     },
     {
-      label: "Activity",
+      label: 'Activity',
       icon: <Activity className="h-4 w-4 mr-2" />,
       href: `/organization/${organization.id}/activity`,
     },
     {
-      label: "Settings",
+      label: 'Settings',
       icon: <Settings className="h-4 w-4 mr-2" />,
       href: `/organization/${organization.id}/settings`,
     },
     {
-      label: "Billing",
+      label: 'Billing',
       icon: <CreditCard className="h-4 w-4 mr-2" />,
       href: `/organization/${organization.id}/billing`,
     },
@@ -63,8 +63,8 @@ export const NavItem = ({
       <AccordionTrigger
         onClick={() => onExpand(organization.id)}
         className={cn(
-          "flex items-center gap-x-2 p-1.5 text-neutral-700 rounded-md hover:bg-neutral-500/10 transition text-start no-underline hover:no-underline",
-          isActive && !isExpanded && "bg-sky-500/10 text-sky-700"
+          'flex items-center gap-x-2 p-1.5 text-neutral-700 rounded-md hover:bg-neutral-500/10 transition text-start no-underline hover:no-underline',
+          isActive && !isExpanded && 'bg-sky-500/10 text-sky-700'
         )}
       >
         <div className="flex items-center gap-x-2">
@@ -74,6 +74,7 @@ export const NavItem = ({
               src={organization.imageUrl}
               alt="Organization"
               className="rounded-sm object-cover"
+              sizes='(min-width: 640px) 7rem, 5rem'
             />
           </div>
 
@@ -88,8 +89,8 @@ export const NavItem = ({
             size="sm"
             onClick={() => router.push(href)}
             className={cn(
-              "w-full font-normal justify-start pl-10 mb-1",
-              pathname === href && "bg-sky-500/10 text-sky-700"
+              'w-full font-normal justify-start pl-10 mb-1',
+              pathname === href && 'bg-sky-500/10 text-sky-700'
             )}
             variant="ghost"
           >

@@ -1,4 +1,4 @@
-import { z } from "zod";
+import { z } from 'zod';
 
 export const createSafeActions = <TInput, TOutput>(
   schema: z.Schema<TInput>,

@@ -1,17 +1,17 @@
-"use client";
+'use client';
 
-import { Accordion, Button, Skeleton } from "@/components/ui";
-import { useOrganization, useOrganizationList } from "@clerk/nextjs";
-import { Plus } from "lucide-react";
-import Link from "next/link";
-import { useLocalStorage } from "usehooks-ts";
-import { NavItem, Organization } from "./nav-item";
+import { Accordion, Button, Skeleton } from '@/components/ui';
+import { useOrganization, useOrganizationList } from '@clerk/nextjs';
+import { Plus } from 'lucide-react';
+import Link from 'next/link';
+import { useLocalStorage } from 'usehooks-ts';
+import { NavItem, Organization } from './nav-item';
 
 type Props = {
   storageKey?: string;
 };
 
-export const Sidebar = ({ storageKey = "t-sidebar-state" }: Props) => {
+export const Sidebar = ({ storageKey = 't-sidebar-state' }: Props) => {
   const [expanded, setExpanded] = useLocalStorage<Record<string, any>>(
     storageKey,
     {}

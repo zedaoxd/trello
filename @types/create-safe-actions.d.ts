@@ -1,5 +1,5 @@
 type FieldErrors<T> = {
-  [K in keyof T]?: string;
+  [K in keyof T]?: string[];
 };
 
 type ActionState<TInput, TOutput> = {
