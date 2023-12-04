@@ -5,7 +5,7 @@ import { Show } from '@/lib/show';
 import { cn } from '@/lib/utils';
 import { forwardRef } from 'react';
 import { useFormStatus } from 'react-dom';
-import { FormErrors } from '.';
+import { FormErrors } from './form-errors';
 
 type Props = {
   id: string;

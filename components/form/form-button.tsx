@@ -1,12 +1,12 @@
 'use client';
 
-import { Button, buttonVariants } from '@/components/ui';
+import { Button } from '@/components/ui';
 import { cn } from '@/lib/utils';
 import { useFormStatus } from 'react-dom';
 
 type Props = {
   children: React.ReactNode;
-  variant?: keyof typeof buttonVariants;
+  variant?: 'default' | 'destructive' | 'outline' | 'secondary' | 'ghost' | 'link' | 'primary';
 } & React.ButtonHTMLAttributes<HTMLButtonElement>;
 
 export const FormSubmit = ({
